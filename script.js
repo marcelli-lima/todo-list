@@ -1,52 +1,51 @@
-const button = document.getElementById("criar-tarefa")
+const button = document.getElementById('criar-tarefa');
 
 function addTarefa() {
-    const valueInput = document.getElementById("texto-tarefa");
-    const list = document.getElementById("lista-tarefas")
-    const createLis = document.createElement("li")
-    const novaTarefa = valueInput.value
-    createLis.innerHTML = novaTarefa
-    list.appendChild(createLis)
-    valueInput.value = ""
+  const valueInput = document.getElementById('texto-tarefa');
+  const list = document.getElementById('lista-tarefas');
+  const createLis = document.createElement('li');
+  const novaTarefa = valueInput.value;
+  createLis.innerHTML = novaTarefa;
+  list.appendChild(createLis);
+  valueInput.value = '';
 }
 
-const valueInput = document.getElementById("texto-tarefa");
-valueInput.addEventListener('keyup', function(event) {
+const valueInput = document.getElementById('texto-tarefa');
+valueInput.addEventListener('keyup', (event) => {
   if (event.key === 'Enter') {
-    addTarefa()
+    addTarefa();
   }
 });
 
-button.addEventListener ("click", addTarefa)
+button.addEventListener('click', addTarefa);
 
-const list = document.getElementById("lista-tarefas")
-list.addEventListener("click", function(event) {
-  const lis = document.getElementsByTagName("li")
- for (li of lis) {
-   if (li.style.backgroundColor = "rgb(128, 128, 128)") {
-    li.style.backgroundColor = "white"
-   }
- }
-  event.target.style.backgroundColor = "rgb(128, 128, 128)"
-})
-
-list.addEventListener("dblclick", (event) => {
-  if (event.target.className === "completed") {
-    event.target.classList.remove("completed")
-  } else {
-    event.target.className = "completed"
+const list = document.getElementById('lista-tarefas');
+list.addEventListener('click', (event) => {
+  const lis = document.getElementsByTagName('li');
+  for (li of lis) {
+    if (li.style.backgroundColor = 'rgb(128, 128, 128)') {
+      li.style.backgroundColor = 'white';
+    }
   }
+  event.target.style.backgroundColor = 'rgb(128, 128, 128)';
+});
 
-})
+list.addEventListener('dblclick', (event) => {
+  if (event.target.className === 'completed') {
+    event.target.classList.remove('completed');
+  } else {
+    event.target.className = 'completed';
+  }
+});
 
-const buttonClear = document.getElementById("apaga-tudo")
-buttonClear.addEventListener("click", () => {
-list.innerHTML =""
-})
+const buttonClear = document.getElementById('apaga-tudo');
+buttonClear.addEventListener('click', () => {
+  list.innerHTML = '';
+});
 
-const buttonRemoveCompleted = document.getElementById("remover-finalizados")
-buttonRemoveCompleted.addEventListener("click", () => {
-  const taskCompleted = document.querySelectorAll(".completed");
+const buttonRemoveCompleted = document.getElementById('remover-finalizados');
+buttonRemoveCompleted.addEventListener('click', () => {
+  const taskCompleted = document.querySelectorAll('.completed');
   for (let i = 0; i < taskCompleted.length; i += 1) {
     taskCompleted[i].remove();
   }
