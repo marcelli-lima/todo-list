@@ -43,3 +43,11 @@ const buttonClear = document.getElementById("apaga-tudo")
 buttonClear.addEventListener("click", () => {
 list.innerHTML =""
 })
+
+const buttonRemoveCompleted = document.getElementById("remover-finalizados")
+buttonRemoveCompleted.addEventListener("click", () => {
+  const taskCompleted = document.querySelectorAll(".completed");
+  for (let i = 0; i < taskCompleted.length; i += 1) {
+    taskCompleted[i].remove();
+  }
+});
