@@ -1,7 +1,7 @@
 .completed {
-  text-decoration: line-through rgb(0 , 0 , 0);
+  text-decoration: line-through black;
 }
 
 .selected {
-  background-color:gray;
-} 
+  background-color: gray;
+}
