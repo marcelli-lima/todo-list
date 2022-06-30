@@ -38,3 +38,8 @@ list.addEventListener("dblclick", (event) => {
   }
 
 })
+
+const buttonClear = document.getElementById("apaga-tudo")
+buttonClear.addEventListener("click", () => {
+list.innerHTML =""
+})
