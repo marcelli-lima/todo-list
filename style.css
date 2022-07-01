@@ -1,6 +1,6 @@
-
 body {
-  padding: 25px
+  padding: 25px;
+  background-color: rgb(221, 184, 190) !important;
 }
 
 .completed {
