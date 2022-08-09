@@ -1,5 +1,7 @@
 # todo-list
 
+## O projeto consiste em uma lista de tarefas salva no local storage, que permite a pessoa usuária adicionar tarefas, marcar como feitas, limpar tarefas concluidas, mudar ordem, limpar e salvar lista.
+
 ## 📋 Requisitos Obrigatórios 
 
 ✔️ 1 - Adicone à sua lista o título "Minha Lista de Tarefas" em uma tag <header> 
